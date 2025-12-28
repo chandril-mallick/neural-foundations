@@ -107,6 +107,12 @@ nn.train(X, y, epochs=10000, learning_rate=0.1)
 | `[1, 0]` | **1** | `0.913` | ~0.08 |
 | `[1, 1]` | **0** | `0.082` | ~0.08 |
 
+## 🔮 Future Work
+
+- **Convolutional Layers**: Implementing `Conv2D` and `MaxPool` for image tasks.
+- **Advanced Optimizers**: Adding `Adam` and `RMSProp`.
+- **Softmax + Categorical Cross Entropy**: For multi-class classification.
+
 ---
 **Author**: Chandril Mallick  
 
