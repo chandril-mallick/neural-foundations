@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.x](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
 [![NumPy](https://img.shields.io/badge/NumPy-1.21%2B-orange)](https://numpy.org/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chandril-mallick-neural-foundations-app-kd133w.streamlit.app/)
 
 A mathematically rigorous implementation of a Neural Network library built entirely from scratch using Python and NumPy. This project eschews high-level frameworks (PyTorch, TensorFlow) to demonstrate the fundamental calculus and linear algebra underlying deep learning.
 
