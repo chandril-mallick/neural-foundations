@@ -14,6 +14,14 @@ This library provides a modular, extensible architecture for building and traini
 - **Gradient Descent dynamics** on non-convex loss surfaces.
 - **Universal Approximation** capabilities of multi-layer perceptions (MLPs).
 
+##  Neural Network Architecture & Data Flow
+
+The following diagram illustrates the complete training pipeline of the neural network implemented from scratch. It shows how input data flows through linear transformations and activation functions, how loss is computed, and how gradients are propagated backward to update weights using gradient descent.
+
+<p align="center">
+  <img src="assets/architecture_data_flow.png" width="800" alt="Architecture Data Flow">
+</p>
+
 ##  Theoretical Formulation
 
 The network computes a composite function $\Phi: \mathbb{R}^n \to \mathbb{R}^m$ through a sequence of affine transformations and non-linear activations.
@@ -107,7 +115,7 @@ nn.train(X, y, epochs=10000, learning_rate=0.1)
 | `[1, 0]` | **1** | `0.913` | ~0.08 |
 | `[1, 1]` | **0** | `0.082` | ~0.08 |
 
-## 🔮 Future Work
+##  Future Work
 
 - **Convolutional Layers**: Implementing `Conv2D` and `MaxPool` for image tasks.
 - **Advanced Optimizers**: Adding `Adam` and `RMSProp`.
