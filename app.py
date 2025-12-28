@@ -69,7 +69,7 @@ if 'weight_history' not in st.session_state:
 nn = st.session_state['nn']
 
 # Tabs for Visualizations
-tab1, tab2, tab3 = st.tabs(["🎯 Decision Boundary", "📉 Weight Dynamics", "🧠 Hidden Activations"])
+tab1, tab2, tab3 = st.tabs(["Decision Boundary", "Weight Dynamics", "Hidden Activations"])
 
 with tab1:
     col1, col2 = st.columns([1, 2])
