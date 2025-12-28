@@ -7,14 +7,14 @@
 
 A mathematically rigorous implementation of a Neural Network library built entirely from scratch using Python and NumPy. This project eschews high-level frameworks (PyTorch, TensorFlow) to demonstrate the fundamental calculus and linear algebra underlying deep learning.
 
-## 📋 Abstract
+##  Abstract
 
 This library provides a modular, extensible architecture for building and training neural networks. By implementing forward pass, backpropagation, and optimization algorithms manually, this project serves as a concrete demonstration of:
 - **Automatic Differentiation logic** (via manual chain rule derivation).
 - **Gradient Descent dynamics** on non-convex loss surfaces.
 - **Universal Approximation** capabilities of multi-layer perceptions (MLPs).
 
-## 🧠 Theoretical Formulation
+##  Theoretical Formulation
 
 The network computes a composite function $\Phi: \mathbb{R}^n \to \mathbb{R}^m$ through a sequence of affine transformations and non-linear activations.
 
@@ -34,7 +34,7 @@ $$\delta^{[l]} = (\delta^{[l+1]} \cdot (W^{[l+1]})^T) \odot \sigma'(Z^{[l]})$$
 Parameter updates follow the gradient of the Loss function $\mathcal{L}$ with respect to parameters:
 $$\frac{\partial \mathcal{L}}{\partial W^{[l]}} = (A^{[l-1]})^T \cdot \delta^{[l]}$$
 
-## 📊 Visual Analysis
+##  Visual Analysis
 
 The following visualizations were generated directly from the model training process on the XOR dataset.
 
@@ -66,7 +66,7 @@ Tracing the trajectory of specific weights during training reveals the optimizat
   <img src="assets/weight_dynamics.png" width="600" alt="Weight Dynamics">
 </p>
 
-## 🛠️ Architecture and Usage
+##  Architecture and Usage
 
 ### Project Structure
 ```bash
@@ -98,7 +98,7 @@ nn.add(Sigmoid())
 nn.train(X, y, epochs=10000, learning_rate=0.1)
 ```
 
-## 🧪 Empirical Validation (XOR)
+##  Empirical Validation (XOR)
 
 | Input | Target | Prediction | Error |
 | :---: | :---: | :---: | :---: |
@@ -109,4 +109,4 @@ nn.train(X, y, epochs=10000, learning_rate=0.1)
 
 ---
 **Author**: Chandril Mallick  
-*Implemented as part of Advanced AI Engineering Portfolio.*
+
