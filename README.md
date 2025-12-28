@@ -70,9 +70,7 @@ graph TD
     style Layer2 fill:#FFFFFF,stroke:#AAA,stroke-width:1px;
 ```
 
-<p align="center">
-  <img src="assets/architecture_data_flow.png" width="800" alt="Architecture Data Flow">
-</p>
+
 
 ##  Theoretical Formulation
 
