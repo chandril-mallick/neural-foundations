@@ -18,6 +18,58 @@ This library provides a modular, extensible architecture for building and traini
 
 The following diagram illustrates the complete training pipeline of the neural network implemented from scratch. It shows how input data flows through linear transformations and activation functions, how loss is computed, and how gradients are propagated backward to update weights using gradient descent.
 
+```mermaid
+graph TD
+    %% Node Definitions
+    Input([Input Data]):::input
+    
+    subgraph Engine ["NeuralNetwork Container"]
+        direction TB
+        subgraph Layer1 ["Layer 1"]
+            Dense1[Dense Layer]:::layer
+            Act1[Activation]:::act
+            Dense1 --> Act1
+        end
+        
+        subgraph Layer2 ["Output Layer"]
+            Dense2[Dense Layer]:::layer
+            Act2[Activation]:::act
+            Dense2 --> Act2
+        end
+        
+        Layer1 --> Layer2
+    end
+    
+    Predict([Prediction]):::output
+    Loss{Loss Function}:::loss
+    Grads[Gradient Computation]:::backprop
+    Update[Weight Update]:::update
+    
+    %% Forward Flow
+    Input ==> Layer1
+    Layer2 ==> Predict
+    Predict -.-> Loss
+    
+    %% Training Loop / Backward Flow
+    Loss ==> Grads
+    Grads ==> Update
+    Update -- "Update Weights" --> Dense1
+    Update -- "Update Weights" --> Dense2
+
+    %% Styling
+    classDef input fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px,color:#0D47A1;
+    classDef layer fill:#FFF3E0,stroke:#FB8C00,stroke-width:2px,color:#E65100;
+    classDef act fill:#F1F8E9,stroke:#7CB342,stroke-width:2px,color:#33691E;
+    classDef output fill:#F3E5F5,stroke:#8E24AA,stroke-width:2px,color:#4A148C;
+    classDef loss fill:#FFEBEE,stroke:#E53935,stroke-width:2px,color:#B71C1C;
+    classDef backprop fill:#E0F7FA,stroke:#00ACC1,stroke-width:2px,color:#006064;
+    classDef update fill:#FCE4EC,stroke:#D81B60,stroke-width:2px,color:#880E4F;
+    
+    style Engine fill:#FAFAFA,stroke:#CCC,stroke-dasharray: 5 5;
+    style Layer1 fill:#FFFFFF,stroke:#AAA,stroke-width:1px;
+    style Layer2 fill:#FFFFFF,stroke:#AAA,stroke-width:1px;
+```
+
 <p align="center">
   <img src="assets/architecture_data_flow.png" width="800" alt="Architecture Data Flow">
 </p>
